@@ -35,7 +35,7 @@ server = smtplib.SMTP('smtp.gmail.com', 587)  # This class manages a connection 
 server.starttls()  # Puts the connection to the SMTP server into TLS mode.
 def login():
     try:
-        server.login('tondurmanasa@gmail.com', 'znlohnfxetyaxcnc')  # logging to the user email
+        server.login(''' 'YOUR MAIL ID'   ''', ''' 'GMAIL PRODUCED PASSWORD '   ''')  # logging to the user email
     except:
         talk("invalid password or id .....try again")
         login()
@@ -100,14 +100,14 @@ def attach_file():
 
 
 def send_email(receiver, subject):
-    email['From'] = 'tondurmanasa@gmail.com'                # from address of user
+    email['From'] = ''' 'YOUR MAIL ID' '''                # from address of user
     email['To'] = receiver                                  # receiver address
     email['Subject'] = subject                              # mentioning the subject of email
     server.send_message(email)                              # sending the email
 
 
 email_list = {
-    "mca": "21352065@pondiuni.ac.in,21352025@pondiuni.ac.in"}  # listing the email address of receiver in a dictionary
+    "KEY": '''KEEP RECEIVER MAIL ID'''}  # listing the email address of receiver in a dictionary
 
 
 def get_email_info():
